@@ -7,8 +7,8 @@
       <tr>
 
         <td>Title</td>
-        <td>Description</td>
-        <td>Creator</td>
+        <td></td>
+        <td>Created time</td>
       </tr>
     </thead>
     <tbody>
@@ -16,13 +16,15 @@
         <tr>
 
           <td><%= link_to(job.title, job_path(job)) %></td>
-          <td><%= job.description %></td>
-          <td><%= job.user.email  %></td>
+
+
           <td>
-              <%= link_to("Edit", edit_job_path(job), class: "btn btn-sm btn-default")%>
-              <%= link_to("Delete", job_path(job),    class: "btn btn-sm btn-default",
+              <%= link_to("Edit", edit_job_path(job), )%>
+              <%= "|"%>
+              <%= link_to("Delete", job_path(job),
                           method: :delete, data: { confirm: "Are you sure?" } )%>
           </td>
+          <td><%= job.created_at %></td>
         </tr>
       <% end %>
     </tbody>
