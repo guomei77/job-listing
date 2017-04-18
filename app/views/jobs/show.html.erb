@@ -3,5 +3,11 @@
     <%= link_to("Edit", edit_job_path(@job), class: "btn btn-primary pull-right")%>
   </div>
   <h2><%= @job.title %></h2>
+  <div class="text-center">
+  <%= link_to("投交履历", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration: underline;") %>
+  </div>
   <p><%= @job.description %></p>
+  p><%= @job.wage_upper_bound %></p>
+  <p><%= @job.wage_lower_bound %></p>
+  <p><%= @job.contact_email %></p>
 </div>
